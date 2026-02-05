@@ -31,7 +31,6 @@
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "Get in touch with me through the email below.",
     "name": "Name",
     "namePlaceholder": "Your full name",
     "email": "Your Email",
