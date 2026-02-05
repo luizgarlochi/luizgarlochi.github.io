@@ -52,10 +52,6 @@ const Navbar = () => {
           }}
         >
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-          <p className="text-white text-[18px] font-bold flex">
-            Luiz Guilherme&nbsp;
-            <span className="sm:block hidden">| JS-Python</span>
-          </p>
         </Link>
 
         {/* Desktop Menu */}
