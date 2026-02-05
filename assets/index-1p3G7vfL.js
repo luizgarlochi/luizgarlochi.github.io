@@ -4023,7 +4023,7 @@ Valid keys: `+JSON.stringify(Object.keys(fe),null,"  "));var F=U(Pe,je,le,Ce,pe+
         top-0
         z-20
         bg-stone-950
-      `,children:Se.jsxs("div",{className:"w-full flex justify-between items-center max-w-7xl mx-auto",children:[Se.jsxs(Kk,{to:"/",className:"flex items-center gap-2",onClick:()=>{t(""),window.scrollTo(0,0)},children:[Se.jsx("img",{src:uK,alt:"logo",className:"w-9 h-9 object-contain"}),Se.jsxs("p",{className:"text-white text-[18px] font-bold flex",children:["Luiz Guilherme ",Se.jsx("span",{className:"sm:block hidden",children:"| JS-Python"})]})]}),Se.jsx("ul",{className:"list-none hidden sm:flex flex-row gap-10",children:vP.map(c=>Se.jsx("li",{className:`
+      `,children:Se.jsxs("div",{className:"w-full flex justify-between items-center max-w-7xl mx-auto",children:[Se.jsx(Kk,{to:"/",className:"flex items-center gap-2",onClick:()=>{t(""),window.scrollTo(0,0)},children:Se.jsx("img",{src:uK,alt:"logo",className:"w-9 h-9 object-contain"})}),Se.jsx("ul",{className:"list-none hidden sm:flex flex-row gap-10",children:vP.map(c=>Se.jsx("li",{className:`
                 ${e===c.id?"text-white":"text-secondary"}
                 hover:text-white
                 text-[18px]
