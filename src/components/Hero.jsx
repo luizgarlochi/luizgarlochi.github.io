@@ -2,8 +2,11 @@ import React from 'react';
 import { styles } from '../styles';
 import { motion } from 'framer-motion';
 import { FaCode } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="relative w-full h-screen mx-auto">
       <div className={`${styles.paddingX}
@@ -39,19 +42,17 @@ const Hero = () => {
 
         </div>
         <div>
-          <h1 className={
-            `${styles.heroHeadText}`
-          }
-          >Hi, I'm <span className="text-violet-600"> Luiz Guilherme Arlochi</span>
+          <h1 className={styles.heroHeadText}>
+            {t("hero.greeting")}{" "}
+            <span className="text-violet-600">
+              {t("hero.name")}
+            </span>
           </h1>
-          <p className={
-            `${styles.heroSubText}
-            mt-2
-            text-white
-            `
-          }>
-            Experienced Full Stack Web Developer with a strong passion for JavaScript and Python. I've recently expanded my skill set to include cloud computing, taking advantage of Google Cloud's Compute Engine and Cloud Storage to manage and optimize training models and large-scale 3D simulations. While I continue to work on some of web development projects, I'm also exploring innovative ways to combine my expertise in web technologies with the visualization of 3D models, with the aim of improving the way these models can be viewed and edited directly through web browsers and mobile devices.
+                    
+          <p className={`${styles.heroSubText} mt-2 text-white`}>
+            {t("hero.description")}
           </p>
+
         </div>
       </div>
 

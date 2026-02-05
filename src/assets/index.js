@@ -23,6 +23,8 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import python from "./tech/python.png";
 import threejs from "./tech/threejs.svg";
+import flagBr from "./brasil-flag.png"
+import flagUSA from "./usa-flag.png"
 
 import wallet from "./wallet.png";
 import gaussian from "./gaussian-template.png";
@@ -54,4 +56,6 @@ export {
   python,
   ai,
   gaussian,
+  flagBr,
+  flagUSA,
 };

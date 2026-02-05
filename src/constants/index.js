@@ -20,20 +20,21 @@ import {
     gaussian,
   } from "../assets";
   
-  export const navLinks = [
-    {
-      id: "about",
-      title: "About",
-    },
-    {
-      id: "works",
-      title: "Work",
-    },
-    {
-      id: "contact",
-      title: "Contact",
-    },
-  ];
+export const navLinks = [
+  {
+    id: "about",
+    title: "nav.about",
+  },
+  {
+    id: "works",
+    title: "nav.works",
+  },
+  {
+    id: "contact",
+    title: "nav.contact",
+  },
+];
+
   
   const services = [
     {
@@ -117,54 +118,33 @@ import {
 
   ];
   
-  const projects = [
-    {
-      name: "Currency Wallet",
-      description:
-        "The application is a financial management tool that helps users track their expenses. It allows users to input and manage expenses, including details such as amount, description, currency, payment method, and category. Additionally, it provides real-time currency conversion using external exchange rate data.",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "redux",
-          color: "green-text-gradient",
-        },
-        {
-          name: "tailwind",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: wallet,
-      source_code_link: "https://github.com/luizArlochi/Wallet-Currency-Converter",
-    },
+const projects = [
+  {
+    id: "currency_wallet",
+    nameKey: "projects.currencyWallet.name",
+    descriptionKey: "projects.currencyWallet.description",
+    tags: [
+      { name: "react", color: "blue-text-gradient" },
+      { name: "redux", color: "green-text-gradient" },
+      { name: "tailwind", color: "pink-text-gradient" },
+    ],
+    image: wallet,
+    source_code_link: "https://github.com/luizgarlochi/Wallet-Currency-Converter",
+  },
+  {
+    id: "gaussian_3d",
+    nameKey: "projects.gaussian3D.name",
+    descriptionKey: "projects.gaussian3D.description",
+    tags: [
+      { name: "Python", color: "blue-text-gradient" },
+      { name: "CudaToolkit", color: "green-text-gradient" },
+      { name: "PyTorch", color: "red-text-gradient" },
+      { name: "Conda-Forge", color: "orange-text-gradient" },
+    ],
+    image: gaussian,
+    source_code_link: "https://github.com/luizgarlochi/Gaussian-3D-Reconstruction",
+  },
+];
 
-    {
-      name: "3D Gaussian Reconstruction",
-      description:
-        "Project under development to reconstruct, rasterize, smooth and visualize 3D objects from Gaussian point clouds. The project aims to improve visualization in a general context, from complex objects to terrain and buildings. It has fields of application in diverse areas, such as engineering, architecture, geography, among others.",
-      tags: [
-        {
-          name: "Python",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "CudaToolkit",
-          color: "green-text-gradient",
-        },
-        {
-          name: "PyTorch",
-          color: "red-text-gradient",
-        },
-        {
-          name: "Conda-Forge",
-          color: "orange-text-gradient",
-        },
-      ],
-      image: gaussian,
-      source_code_link: "https://github.com/luizArlochi/Wallet-Currency-Converter",
-    },
-  ];
   
   export { services, technologies, experiences, testimonials, projects };

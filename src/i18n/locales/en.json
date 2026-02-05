@@ -1,0 +1,43 @@
+{
+  "hero": {
+    "greeting": "Hi, I am",
+    "name": "Luiz Guilherme Arlochi",
+    "description": "Full Stack Developer with experience and a strong interest in JavaScript and Python. Over the past few years, I have expanded my skill set to include cloud computing, using services such as Google Cloud Compute Engine and Cloud Storage to manage and optimize large-scale model training and 3D simulations. While I still work on web development projects, I have been exploring innovative ways to integrate web technologies with 3D model visualization, aiming to improve how these models can be viewed and edited directly in browsers and mobile devices."
+  },
+  "about": {
+    "overview": "Overview",
+    "introduction": "Introduction",
+    "description": "Proficient in a wide range of technical skills, including JavaScript, TypeScript, Python, SH/Bash Terminal, Linux, Git, HTML5/CSS, React.js, Docker, Django, MongoDB, Flask, MySQL, and others. I have a solid foundation in programming logic, responsive web design, and testing frameworks such as Jest. Familiar with agile methodologies, including Scrum, and project management tools such as Trello and Jira. Skilled in clean code practices and using Docker for efficient development. In addition to technical expertise, I possess strong interpersonal skills, including cognitive flexibility, fast learning, and problem-solving abilities. My critical thinking and goal-oriented mindset ensure efficient project execution."
+  },
+  "works": {
+    "subtitle": "My work",
+    "title": "Projects.",
+    "description": "The following projects showcase my skills and experience through real-world examples of my work. Each project is briefly described, with links to code repositories and live demos. They reflect my ability to solve complex problems, work with different technologies, and manage projects effectively."
+  },
+  "nav": {
+    "about": "About",
+    "works": "Projects",
+    "contact": "Contact"
+  },
+  "projects": {
+    "currencyWallet": {
+      "name": "Currency Wallet",
+      "description": "A financial management application that helps users track expenses. It allows registering and managing expenses, including amount, description, currency, payment method, and category. Additionally, it performs real-time currency conversion using external exchange rate data."
+    },
+    "gaussian3D": {
+      "name": "3D Gaussian Reconstruction",
+      "description": "A project under development focused on reconstructing, rasterizing, smoothing, and visualizing 3D objects from Gaussian point clouds. The goal is to enhance the visualization of complex objects, terrain, and buildings, with applications in areas such as engineering, architecture, and geospatial analysis."
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Get in touch with me through the email below.",
+    "name": "Name",
+    "namePlaceholder": "Your full name",
+    "email": "Your Email",
+    "emailPlaceholder": "Your email address",
+    "message": "Message",
+    "messagePlaceholder": "Write your message here...",
+    "send": "Send"
+  }
+}

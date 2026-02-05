@@ -1,26 +1,29 @@
-import { useState, useRef } from 'react';
-import { motion } from 'framer-motion';
-import emailjs from '@emailjs/browser';
-import { validateForm } from '../utils/validateForm';
-import { displayErrorAlert } from '../utils/errorHandle';
+import { useState, useRef } from "react";
+import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import emailjs from "@emailjs/browser";
 
-import { styles } from '../styles';
-import { EarthCanvas } from './canvas';
-import { SectionWrapper } from '../hoc';
-import { slideIn } from '../utils/motion';
+import { validateForm } from "../utils/validateForm";
+import { displayErrorAlert } from "../utils/errorHandle";
+
+import { styles } from "../styles";
+import { EarthCanvas } from "./canvas";
+import { SectionWrapper } from "../hoc";
+import { slideIn } from "../utils/motion";
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   const formRef = useRef();
   const [form, setForm] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
-    const { target } = e;
-    const { name, value } = target;
+    const { name, value } = e.target;
 
     setForm({
       ...form,
@@ -31,62 +34,52 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validate form fields
     const { name, email, message } = form;
     const errors = validateForm(name, email, message);
 
-    // Display error messages if any field is invalid
     if (Object.keys(errors).length > 0) {
-      displayErrorAlert('Please fill in all required fields.');
+      displayErrorAlert(t("contact.validationError"));
       return;
     }
 
     setLoading(true);
 
     try {
-      // Send email
-      const response = await emailjs.send(
-        'service_vbnlzuf', // Service ID
-        'template_5fzuqmh', // Template ID
+      await emailjs.send(
+        "service_vbnlzuf",
+        "template_5fzuqmh",
         {
-          from_name: form.name,
-          reply_to: form.email,
-          message: form.message,
+          from_name: name,
+          reply_to: email,
+          message,
         },
-        'Mvvu5zxrkvoIVhXS1' // User ID from emailJS
+        "Mvvu5zxrkvoIVhXS1"
       );
 
-      console.log('Email successfully sent!', response);
-
-      // Reset form fields
       setForm({
-        name: '',
-        email: '',
-        message: '',
+        name: "",
+        email: "",
+        message: "",
       });
 
       setLoading(false);
-
-      // Show success message to the user
-      alert('Thank you! Your message has been sent successfully.');
+      alert(t("contact.success"));
     } catch (error) {
-      console.error('Failed to send email', error);
+      console.error("Failed to send email", error);
       setLoading(false);
-
-      // Display error message to the user
-      displayErrorAlert('Oops! Failed to send email. Please try again later.');
+      displayErrorAlert(t("contact.error"));
     }
   };
 
-
   return (
-    <div className="
-      xl:mt-12
-      xl:flex-row
-      flex-col-reverse
-      flex
-      gap-5
-      overflow-hidden
+    <div
+      className="
+        xl:mt-12
+        xl:flex-row
+        flex-col-reverse
+        flex
+        gap-5
+        overflow-hidden
       "
     >
       <motion.div
@@ -94,11 +87,12 @@ const Contact = () => {
         className="flex-[0.75] bg-indigo-950 p-8 rounded-2xl"
       >
         <p className={styles.sectionSubText}>
-          Get in touch
+          {t("contact.subtitle")}
         </p>
         <h3 className={styles.sectionHeadText}>
-          Contact.
+          {t("contact.title")}
         </h3>
+
         <form
           ref={formRef}
           onSubmit={handleSubmit}
@@ -106,7 +100,7 @@ const Contact = () => {
         >
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">
-              Your Name
+              {t("contact.name")}
               <span className="text-red-500">*</span>
             </span>
             <input
@@ -114,23 +108,25 @@ const Contact = () => {
               name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder="What's your name?"
+              placeholder={t("contact.namePlaceholder")}
               className="
                 bg-tertiary
                 p-6
                 py-4
                 placeholder:text-secondary
-                text-white rounded-lg
+                text-white
+                rounded-lg
                 outilined-none
                 border-none
                 font-medium
-                "
-                required
+              "
+              required
             />
           </label>
+
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">
-              Your Email
+              {t("contact.email")}
               <span className="text-red-500">*</span>
             </span>
             <input
@@ -138,23 +134,25 @@ const Contact = () => {
               name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder="What's your email?"
+              placeholder={t("contact.emailPlaceholder")}
               className="
                 bg-tertiary
                 p-6
                 py-4
                 placeholder:text-secondary
-                text-white rounded-lg
+                text-white
+                rounded-lg
                 outilined-none
                 border-none
                 font-medium
-                "
-                required
+              "
+              required
             />
           </label>
+
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">
-              Your Message
+              {t("contact.message")}
               <span className="text-red-500">*</span>
             </span>
             <textarea
@@ -162,18 +160,19 @@ const Contact = () => {
               name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder="What's do you want to say?"
+              placeholder={t("contact.messagePlaceholder")}
               className="
                 bg-tertiary
                 p-6
                 py-4
                 placeholder:text-secondary
-                text-white rounded-lg
+                text-white
+                rounded-lg
                 outilined-none
                 border-none
                 font-medium
-                "
-                required
+              "
+              required
             />
           </label>
 
@@ -191,11 +190,9 @@ const Contact = () => {
               shadow-primary
               rounded-xl
               hover:shadow-lg
-              "
-              onClick={(e)=>handleSubmit(e, form.name, form.email, form.message)}
+            "
           >
-            {loading ? "Sending..." : "Send"}
-
+            {loading ? t("contact.sending") : t("contact.send")}
           </button>
         </form>
       </motion.div>
@@ -205,10 +202,9 @@ const Contact = () => {
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
         <EarthCanvas />
-
       </motion.div>
     </div>
-  )
-}
+  );
+};
 
 export default SectionWrapper(Contact, "contact");

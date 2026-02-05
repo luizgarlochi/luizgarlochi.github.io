@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "greeting": "Olá, eu sou",
+    "name": "Luiz Guilherme Arlochi",
+    "description": "Desenvolvedor Full Stack com experiência e forte interesse em JavaScript e Python. Nos últimos anos, expandi meu conjunto de habilidades para incluir computação em nuvem, utilizando serviços como Google Cloud Compute Engine e Cloud Storage para gerenciar e otimizar o treinamento de modelos e simulações 3D em larga escala. Embora eu ainda atue em projetos de desenvolvimento web, venho explorando formas inovadoras de integrar tecnologias web com visualização de modelos 3D, buscando melhorar a forma como esses modelos podem ser visualizados e editados diretamente em navegadores e dispositivos móveis."
+  },
+  "about":{
+    "overview": "Visão Geral",
+    "introduction": "Introdução",
+    "description": "Proficient in a wide range of technical skills, including JavaScript, TypeScript, Python, SH/Bash Terminal, Linux, Git, HTML5/CSS, React.js, Docker, Django, Mongo, Flask, MySQL and others. I have a solid grounding in programming logic, responsive web design and testing frameworks such as Jest. Familiarity with agile methodologies, including Scrum, and project management tools such as Trello and jira. Ability to clean-code and use Docker for efficient development. In addition to technical skills, I possess a strong set of interpersonal skills, including cognitive flexibility, ease of learning and problem-solving skills. My critical thinking skills and goal orientation ensure efficient project execution."
+},
+  "works": {
+      "subtitle": "Meu trabalho",
+      "title": "Projetos.",
+      "description": "Os projetos a seguir mostram minhas habilidades e experiência por meio de exemplos do mundo real do meu trabalho. Cada projeto é brevemente descrito com links para repositórios de código e demonstrações ao vivo. Ele reflete minha capacidade de resolver problemas complexos, trabalhar com diferentes tecnologias e gerenciar projetos de forma eficaz."
+  },
+  "nav": {
+    "about": "Sobre",
+    "works": "Projetos",
+    "contact": "Contato"
+  },
+    "projects": {
+    "currencyWallet": {
+      "name": "Currency Wallet",
+      "description": "Aplicação de gestão financeira que auxilia usuários no controle de despesas. Permite o cadastro e gerenciamento de gastos, incluindo valor, descrição, moeda, forma de pagamento e categoria. Além disso, realiza conversão de moedas em tempo real utilizando dados externos de taxas de câmbio."
+    },
+    "gaussian3D": {
+      "name": "Reconstrução 3D por Gaussianos",
+      "description": "Projeto em desenvolvimento para reconstrução, rasterização, suavização e visualização de objetos 3D a partir de nuvens de pontos gaussianos. O objetivo é aprimorar a visualização de objetos complexos, terrenos e edificações, com aplicações em áreas como engenharia, arquitetura e geoprocessamento."
+    }
+  },
+    "contact": {
+        "title": "Contato",
+        "subtitle": "Entre em contato comigo através do email abaixo.",
+        "name": "Nome",
+        "namePlaceholder": "Seu nome completo",
+        "email": "Seu Email",
+        "emailPlaceholder": "Seu email",
+        "message": "Mensagem",
+        "messagePlaceholder": "Escreva sua mensagem aqui...",
+        "send": "Enviar"
+    }
+
+}
